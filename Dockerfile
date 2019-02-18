@@ -19,6 +19,7 @@ RUN INSTALL_PKGS="mariadb-server" && \
 
 # install nginx
 RUN INSTALL_PKGS="nginx" && \
+    rpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm && \
     yum install -y --setopt=tsflags=nodocs $INSTALL_PKGS && \
     rpm -V $INSTALL_PKGS && \
     yum clean all
