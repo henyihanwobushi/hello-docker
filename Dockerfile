@@ -31,7 +31,11 @@ RUN INSTALL_PKGS="python27 python27-python-devel python27-python-setuptools pyth
     yum -y clean all
 
 # install supervisor
-RUN easy_install supervisor
+RUN yum update -y && \
+    yum install -y epel-release && \
+    yum install -y python-setuptools && \
+    yum clean all && \
+    easy_install supervisor
 
 COPY container-files /
 
