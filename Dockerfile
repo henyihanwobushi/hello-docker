@@ -1,5 +1,10 @@
 FROM centos/s2i-base-centos7
 
+ENV NAME=nginx \
+    NGINX_VERSION=1.14 \
+    NGINX_SHORT_VER=114 \
+    VERSION=0
+
 RUN yum install -y yum-utils && \
     yum install -y centos-release-scl && \
     INSTALL_PKGS="rsync tar gettext hostname bind-utils groff-base shadow-utils rh-mysql57" && \
