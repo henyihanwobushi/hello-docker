@@ -20,5 +20,3 @@ https://github.com/sclorg/nginx-container/blob/master/1.14/Dockerfile
 ## s2i source-to-image
 
 https://github.com/openshift/source-to-image
-
-
